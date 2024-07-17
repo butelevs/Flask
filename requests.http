@@ -1,0 +1,47 @@
+
+@baseUrl = http://localhost:5000/
+
+###
+
+# создать пользователя
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+    "name": "test user",
+    "email": "test_user@mail.ru",
+    "password": "super secret user password1"
+}
+
+### 
+
+# получить пользователя
+GET {{baseUrl}}/users/1
+Content-Type: application/json
+
+###
+
+# создать объявление
+POST {{baseUrl}}/adverstisements
+Content-Type: application/json
+
+{
+    "title": "test adv",
+    "description": "test description",
+    "owner_id": 1
+}
+
+
+### 
+
+# получить объявление
+GET {{baseUrl}}/adverstisements/1
+Content-Type: application/json
+
+### 
+
+# удалить объявление
+DELETE {{baseUrl}}/adverstisements/1
+Content-Type: application/json
+User: 1
+Password: super secret user password
